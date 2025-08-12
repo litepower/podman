@@ -1,0 +1,24 @@
+[Container]
+Image=lscr.io/linuxserver/calibre-web:latest
+# 环境变量
+Environment=PUID=1000
+Environment=PGID=1000
+Environment=TZ=Asia/Shanghai
+Environment=DOCKER_MODS=linuxserver/mods:universal-calibre
+Environment=OAUTHLIB_RELAX_TOKEN_SCOPE=1
+# 端口映射
+PublishPort=8083:8083
+# 卷挂载
+Volume=/data/appdata/calibre-web:/config:Z
+Volume=/data/books:/books:Z
+
+[Service]
+# 重启策略
+Restart=unless-stopped
+# 可选：添加 systemd 依赖控制
+Wants=network-online.target
+After=network-online.target
+
+[Install]
+# 开机自启动
+WantedBy=default.target
