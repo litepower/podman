@@ -10,7 +10,7 @@ Environment=CLI_ARGS=abc
 PublishPort=8081:8181
 # 卷挂载
 Volume=/data/appdata/calibre:/config:Z
-Volume=/data/books:/calibre library:Z
+Volume=/data/books:/config/calibre library:Z
 Volume=/data/epub:/epub:Z
 
 [Service]
