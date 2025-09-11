@@ -6,7 +6,6 @@ Environment=PGID=1000
 Environment=TZ=Asia/Shanghai
 # 端口映射
 PublishPort=8096:8096
-PublishPort=7359:7359/udp
 # 卷挂载
 Volume=/data/appdata/emby:/config:Z
 Volume=/data/Downloads/media:/data:z
