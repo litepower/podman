@@ -5,11 +5,11 @@ Image=docker.io/linuxserver/jellyfin:latest
 Environment=PUID=1000
 Environment=PGID=1000
 Environment=TZ=Asia/Shanghai
-# 端口映射
+# 端口映射 
 PublishPort=8096:8096
 # 卷挂载
 Volume=/data/appdata/jellyfin:/config:Z
-Volume=/data/Downloads/media:/media:ro,z
+Volume=/data/media:/media:ro,z
 Volume=/data/MiSans:/usr/local/share/fonts/truetype/MiSans:Z
 # 设备映射（用于硬件加速）
 AddDevice=/dev/dri:/dev/dri
