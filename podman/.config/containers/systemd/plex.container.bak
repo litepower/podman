@@ -1,0 +1,29 @@
+[Container]
+# Image
+Image=docker.io/linuxserver/plex:latest
+# Environment Variables
+Environment=PUID=1000
+Environment=PGID=1000
+Environment=TZ=Asia/Shanghai
+Environment=VERSION=docker
+# You must get a new claim token from https://www.plex.tv/claim/
+# and paste it below. It is only valid for a few minutes.
+Environment=PLEX_CLAIM=claim-xxxxxxxxxxxxxxxxxxxx
+# Port Mapping (add more if you need remote access/DLNA)
+PublishPort=32400:32400
+# Volume Mounts
+Volume=/data/appdata/plex:/config:Z
+Volume=/data/media:/media:ro,z
+# Device Mapping (for hardware transcoding)
+AddDevice=/dev/dri:/dev/dri
+
+[Service]
+# Restart Policy
+Restart=unless-stopped
+# Optional: Add systemd dependency control
+Wants=network-online.target
+After=network-online.target
+
+[Install]
+# Enable on boot
+WantedBy=default.target
