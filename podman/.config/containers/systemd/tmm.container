@@ -10,7 +10,7 @@ PublishPort=5900:5900
 PublishPort=4000:4000
 # 卷挂载
 Volume=/data/appdata/tinymediamanager:/data:Z
-Volume=/data/Downloads/media:/media:Z
+Volume=/data/media:/media:Z
 
 [Service]
 # 重启策略
