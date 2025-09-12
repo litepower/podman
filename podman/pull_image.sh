@@ -1,4 +1,4 @@
-#!/usr/bin/sh
+#!/usr/bin/env bash
 
 # 1. 仅更新正在运行的容器镜像
 podman ps --format "{{.Image}} {{.Names}}" | while read image name; do
