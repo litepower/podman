@@ -4,7 +4,7 @@ Image=docker.io/library/python:3
 # 工作目录
 WorkingDir=/usr/src/myapp
 # 环境变量
-userNS=keep-id
+RunArgs=--userns=keep-id
 Environment=TZ=Asia/Shanghai
 # 端口映射
 PublishPort=5008:5008
