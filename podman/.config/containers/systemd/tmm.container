@@ -1,8 +1,6 @@
 [Container]
 Image=docker.io/tinymediamanager/tinymediamanager:latest
 # 环境变量
-Environment=USER_ID=1000
-Environment=GROUP_ID=1000
 Environment=TZ=Asia/Shanghai
 Environment=ALLOW_DIRECT_VNC=true
 # 端口映射
