@@ -1,6 +1,7 @@
 [Container]
 Image=docker.io/tinymediamanager/tinymediamanager:latest
 # 环境变量
+PodmanArgs=--userns=keep-id --user=root
 Environment=TZ=Asia/Shanghai
 Environment=ALLOW_DIRECT_VNC=true
 # 端口映射
