@@ -2,8 +2,7 @@
 # Image
 Image=docker.io/linuxserver/plex:latest
 # Environment Variables
-Environment=PUID=1000
-Environment=PGID=1000
+userNS=keep-id
 Environment=TZ=Asia/Shanghai
 Environment=VERSION=docker
 # You must get a new claim token from https://www.plex.tv/claim/

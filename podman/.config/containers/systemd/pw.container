@@ -1,8 +1,7 @@
 [Container]
 Image=docker.io/vaultwarden/server:latest
 # 环境变量
-Environment=PUID=1000
-Environment=PGID=1000
+userNS=keep-id
 Environment=TZ=Asia/Shanghai
 # 端口映射
 PublishPort=8181:80
