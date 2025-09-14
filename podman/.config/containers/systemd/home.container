@@ -3,7 +3,7 @@ Image=ghcr.io/gethomepage/homepage:latest
 # 网络模式 - 使用 host 网络模式
 Network=host
 # 环境变量
-RunArgs=--userns=keep-id
+
 Environment=TZ=Asia/Shanghai
 Environment=HOMEPAGE_ALLOWED_HOSTS=*
 # 卷挂载
