@@ -8,7 +8,7 @@ Restart=unless-stopped
 
 ExecStart=/usr/bin/podman run \
   --rm \
-  --name=calibre-web \
+  --name=calibreweb \
   -e TZ=Asia/Shanghai \
   -e DOCKER_MODS=linuxserver/mods:universal-calibre \
   -e OAUTHLIB_RELAX_TOKEN_SCOPE=1 \
@@ -17,7 +17,7 @@ ExecStart=/usr/bin/podman run \
   -v /data/books:/books:Z \
   lscr.io/linuxserver/calibre-web:latest
 
-ExecStop=/usr/bin/podman stop -t 10 calibre-web
+ExecStop=/usr/bin/podman stop -t 10 calibreweb
 
 [Install]
 WantedBy=default.target
