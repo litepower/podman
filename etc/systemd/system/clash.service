@@ -15,7 +15,7 @@ ExecStart=/usr/bin/podman run \
   /usr/src/myapp/start.sh
 
 # 停止命令
-ExecStop=/usr/bin/podman stop -t 10 myapp
+ExecStop=/usr/bin/podman stop -t 10 clash
 
 # 重启策略
 Restart=unless-stopped
