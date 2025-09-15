@@ -7,7 +7,7 @@ WorkingDir=/usr/src/myapp
 
 Environment=TZ=Asia/Shanghai
 # 端口映射
-PublishPort=5008:5008
+PublishPort=5005:5005
 # 卷挂载 - 修正 SELinux 标签
 Volume=/root/huai12138_bot:/usr/src/myapp:z
 # 启动命令 - 使用启动脚本
